@@ -1,0 +1,184 @@
+#header {
+     background: linear-gradient($colorOne 75%, transparent 75%);
+     & .container {
+          display: grid;
+          grid-template-columns: 2fr 4fr;
+          grid-template-rows: 93px 1fr;
+          grid-auto-rows: auto;
+          text-align: center;
+          padding-top: 1rem;
+          & .header__logo,
+          & .header__subtitle {
+               display: flex;
+               justify-content: flex-start;
+               width: 100%;
+               height: 50%;
+          }
+          & .header__logo { 
+               font-family: $font-family-twoLight;
+               align-items: flex-end;
+               color: $white;
+               font-weight: 300;
+               font-size: 2rem;
+               letter-spacing: .3rem;
+               text-transform: uppercase;
+               line-height: 1;
+               & span {
+                    color: $colorTwo;
+                    font-weight: 800;
+               }
+          }
+          & .header__subtitle {
+               font-family: $font-family-twoLight;
+               color: $white;
+               align-items: flex-start;
+               line-height: 1;
+               letter-spacing: -0.05rem;
+               font-weight: 300;
+          }
+          & .navbar {
+               height: 100%;
+               & .nav {
+                    display: flex;
+                    justify-content: flex-end;
+                    list-style: none;
+                    width: 100%;
+                    height: 100%;
+                    & .nav__item {
+                         padding: 0 1.5rem;
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                    }
+                    & .nav__link {
+                         font-family: $font-family-twoLight;
+                         text-decoration: none;
+                         text-transform: uppercase;
+                         font-size: .95rem;
+                         color: $white;
+                         font-weight: 300;
+                         opacity: .7;
+                         transition: all .2s ease-in;
+                         &:hover {
+                              opacity: 1;
+                              color: $colorTwo;
+                         }
+                    }
+               }
+               @media screen and (max-width: 1290px) {
+                    & {
+                         display: none;
+                    }
+               }
+          }
+          & .banner {
+               position: relative;
+               display: flex;
+               background: #12c2e9;
+               background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+               background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); 
+               width: 100%;
+               max-height: 560px;
+               height: auto;
+               border-radius: 5px;
+               & .banner__img {
+                    width: 100%;
+                    & img {
+                         width: 100%;
+                         border-radius: 5px;
+                         height: 100%;
+                         object-fit: cover;
+                         opacity: .87;
+                         @media screen and (max-width: 990px) {
+                              & {
+                                   opacity: .70;
+                              }
+                         }
+                    }
+               }
+               & .banner__copy {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 5rem;
+                    width: 45%;
+                    height: 100%;
+                    justify-content: center;
+                    text-align: left;
+                    & .banner__copy__title {
+                         font-family: $font-family-oneBold;
+                         color: $colorOne;
+                         font-weight: 600;
+                         text-transform: uppercase;
+                         font-size: 2.3rem;
+                         letter-spacing: .3rem;
+                    }
+                    & .banner__copy__subtitle {
+                         display: block;
+                         font-family: $font-family-oneLight;
+                         font-size: 1.4rem;
+                         letter-spacing: normal;
+                         margin-bottom: 1rem;
+                    }
+                    & .banner__copy__description {
+                         font-family: $font-family-oneNormal;
+                         color: $colorThree;
+                         font-size: 1rem;
+                         margin-bottom: 1rem;
+                    }
+                    & .banner__copy__button {
+                         padding: 1rem 0;
+                         width: 45%;
+                         background: linear-gradient($colorOne, darken($colorOne, 15));
+                         border: none;
+                         font-size: 1rem;
+                         font-family: $font-family-oneLight;
+                         color: $white;
+                         border-radius: 7px;
+                         transition: all .3s;
+                         cursor: pointer;
+                         &:hover {
+                              color: $colorTwo;
+                         }
+                         @media screen and (max-width: 990px) {
+                              & {
+                                   width: 100%;
+                              }
+                         }
+                    }
+                    @media screen and (max-width: 990px) {
+                         & {
+                              width: 100%;
+                         }
+                    }
+                    @media screen and (max-width: 510px) {
+                         & {
+                              display: none;
+                         }
+                    }
+               }
+               @media screen and (max-width: 1290px) {
+                    & {
+                         max-height: 380px;
+                    }
+               }
+               @media screen and (max-width: 990px) {
+                    & {
+                         max-height: 350px;
+                    }
+               }
+          }
+          & .container-box:nth-child(3) {
+               grid-column: span 2;
+          }
+          @media screen and (max-width: 1290px) {
+               & {
+                    grid-template-columns: 1fr;
+                    & .header__logo,
+                    & .header__subtitle {
+                         justify-content: center;
+                    }
+               }
+          }
+     }
+}

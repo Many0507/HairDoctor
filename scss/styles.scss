@@ -1,0 +1,19 @@
+// Import all scss files in one.
+// 
+// Base: 
+// * Variables
+@import './base/_variables';
+// * Base code
+@import './base/_base';
+// Layout:
+// * Banner
+@import './layout/_document';
+@import './layout/_header';
+@import './layout/_services';
+@import './layout/_clients';
+@import './layout/_news';
+@import './layout/_footer';
+// * 
+// Modules:
+// * Modules
+@import './modules/_modules';

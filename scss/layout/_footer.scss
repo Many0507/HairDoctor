@@ -1,0 +1,37 @@
+#footer {
+     padding: 2rem 0;
+     background: $colorOne;
+     color: $white;
+     & .container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          & .credits {
+               font-size: .9rem;
+          }
+          & .social {
+               width: 100%;
+               text-align: right;
+               @media screen and (max-width: 990px) {
+                    text-align: center;
+                    padding-top: 1.5rem;
+               }
+               & .social__item {
+                    font-size: 1.5rem;
+                    padding: 0 .7rem;
+                    & i {
+                         color: darken($colorOne, 13%);
+                         transition: all .2s;
+                         &:hover {
+                              color: darken($colorTwo, 13%);
+                         }
+                    }
+               }
+          }
+          @media screen and (max-width: 990px) {
+               & {
+                    grid-template-columns: 1fr;
+                    text-align: center;
+               }
+          }
+     }
+}
